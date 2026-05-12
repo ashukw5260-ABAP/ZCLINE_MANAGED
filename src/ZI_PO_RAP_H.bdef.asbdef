@@ -1,0 +1,79 @@
+managed implementation in class ZBP_I_PO_RAP_H unique;
+strict ( 2 );
+
+// ─────────────────────────────────────────────────────────────
+// ROOT ENTITY  –  Purchase Order Header
+// ─────────────────────────────────────────────────────────────
+define behavior for ZI_PO_RAP_H alias PurchaseOrderHeader
+  persistent table zpo_rap_h
+  lock master
+  etag master LastChangedAt
+{
+  // Standard CRUD operations
+  create;
+  update;
+  delete;
+
+  // Key field: settable on create, readonly on update
+  field ( readonly : update ) PoId;
+
+  // Audit fields: always readonly
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+  // Composition: enable full CRUD on child items
+  association _Items { create; update; delete; }
+
+  // Field mapping to persistence table
+  mapping for zpo_rap_h
+  {
+    PoId          = po_id;
+    CompanyCode   = company_code;
+    Supplier      = supplier;
+    DocumentDate  = document_date;
+    CurrencyCode  = currency_code;
+    GrossAmount   = gross_amount;
+    CreatedBy     = created_by;
+    CreatedAt     = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// CHILD ENTITY  –  Purchase Order Item (dependent on Header)
+// ─────────────────────────────────────────────────────────────
+define behavior for ZI_PO_RAP_I alias PurchaseOrderItem
+  persistent table zpo_rap_i
+  lock dependent by _Header
+  etag dependent by _Header
+{
+  // Child supports update and delete
+  // Create is handled via parent's composition association
+  update;
+  delete;
+
+  // Parent key: always readonly
+  field ( readonly ) PoId;
+
+  // Child key: settable on create, readonly on update
+  field ( readonly : update ) PoItem;
+
+  // Audit fields: always readonly
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+  // Field mapping to persistence table
+  mapping for zpo_rap_i
+  {
+    PoId          = po_id;
+    PoItem        = po_item;
+    Material      = material;
+    Quantity      = quantity;
+    CurrencyCode  = currency_code;
+    UnitPrice     = unit_price;
+    NetAmount     = net_amount;
+    CreatedBy     = created_by;
+    CreatedAt     = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}
