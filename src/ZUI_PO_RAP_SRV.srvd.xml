@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SRVD" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
-    <SRVD>
-      <NAME>ZUI_PO_RAP_SRV</NAME>
-      <TYPE>SERVICE</TYPE>
-      <DESCRIPTION>Purchase Order RAP Service Definition</DESCRIPTION>
-    </SRVD>
+   <SRVD>
+    <NAME>ZUI_PO_RAP_SRV</NAME>
+    <TYPE>SERVICE</TYPE>
+    <DESCRIPTION>Purchase Order RAP Service Definition</DESCRIPTION>
+   </SRVD>
   </asx:values>
-</asx:abap>
+ </asx:abap>
+</abapGit>

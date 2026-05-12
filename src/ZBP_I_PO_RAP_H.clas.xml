@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
-    <CLAS>
-      <NAME>ZBP_I_PO_RAP_H</NAME>
-      <LANGU>E</LANGU>
-      <DESCRIPT>Behavior Pool for PO Header - Managed Scenario</DESCRIPT>
-      <STATE>1</STATE>
-      <CLSCCINCL>X</CLSCCINCL>
-      <FIXPT>X</FIXPT>
-      <UNICODE>X</UNICODE>
-    </CLAS>
+   <VSEOCLASS>
+    <CLSNAME>ZBP_I_PO_RAP_H</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Behavior Pool for PO Header - Managed Scenario</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
   </asx:values>
-</asx:abap>
+ </asx:abap>
+</abapGit>
