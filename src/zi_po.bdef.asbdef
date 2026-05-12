@@ -1,0 +1,31 @@
+unmanaged implementation in class ZBP_I_PO unique;
+strict ( 2 );
+
+define behavior for ZI_PO alias PO
+  lock master
+  authorization master ( global )
+  etag master CHANGED_AT
+{
+  create;
+  update;
+  delete;
+  
+  association _Items { create; }
+  
+  field ( mandatory : create ) PO_ID;
+  field ( readonly ) CREATED_BY, CREATED_AT, CHANGED_BY, CHANGED_AT, IS_DELETED;
+}
+
+define behavior for ZI_PO_ITEM alias POItem
+  lock dependent by _PO
+  authorization dependent by _PO
+  etag dependent by _PO
+{
+  update;
+  delete;
+  
+  field ( mandatory : create ) ITEM_NO;
+  field ( readonly ) PO_ID, CREATED_BY, CREATED_AT, CHANGED_BY, CHANGED_AT, IS_DELETED;
+  
+  association _PO;
+}

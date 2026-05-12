@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SRVB" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SRVB>
+    <NAME>ZUI_PO_O4</NAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>PO OData V4 Service Binding</DESCRIPT>
+    <CATEGORY>7</CATEGORY>
+    <EXPOSURE>0</EXPOSURE>
+    <RELEASE>0</RELEASE>
+    <AUTHOR></AUTHOR>
+    <CREATEDON>0000-00-00</CREATEDON>
+    <CHANGEDBY></CHANGEDBY>
+    <CHANGEDON>0000-00-00</CHANGEDON>
+    <CHGIND>A</CHGIND>
+    <BIND_TYPE>ODATA_V4_UI</BIND_TYPE>
+    <SRVD_NAME>ZUI_PO_SRV</SRVD_NAME>
+   </SRVB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

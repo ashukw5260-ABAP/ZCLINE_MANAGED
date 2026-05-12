@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <CLAS>
+    <NAME>ZBP_I_PO</NAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Behavior Implementation for PO</DESCRIPT>
+    <CATEGORY>30</CATEGORY>
+    <EXPOSURE>2</EXPOSURE>
+    <RELEASE>0</RELEASE>
+    <AUTHOR></AUTHOR>
+    <CREATEDON>0000-00-00</CREATEDON>
+    <CHANGEDBY></CHANGEDBY>
+    <CHANGEDON>0000-00-00</CHANGEDON>
+    <CHGIND>A</CHGIND>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </CLAS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

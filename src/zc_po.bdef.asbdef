@@ -1,0 +1,18 @@
+projection;
+
+define behavior for ZC_PO alias PO
+{
+  use create;
+  use update;
+  use delete;
+  
+  use association _Items { create; }
+}
+
+define behavior for ZC_PO_ITEM alias POItem
+{
+  use update;
+  use delete;
+  
+  use association _PO;
+}

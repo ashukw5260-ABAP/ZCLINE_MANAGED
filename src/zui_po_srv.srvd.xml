@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SRVD" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SRVD>
+    <NAME>ZUI_PO_SRV</NAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>PO Service Definition</DESCRIPT>
+    <CATEGORY>7</CATEGORY>
+    <EXPOSURE>1</EXPOSURE>
+    <RELEASE>0</RELEASE>
+    <AUTHOR></AUTHOR>
+    <CREATEDON>0000-00-00</CREATEDON>
+    <CHANGEDBY></CHANGEDBY>
+    <CHANGEDON>0000-00-00</CHANGEDON>
+    <CHGIND>A</CHGIND>
+    <SRVD>
+@EndUserText.label: 'PO Service Definition'
+define service ZUI_PO_SRV {
+  expose ZC_PO as PO;
+  expose ZC_PO_ITEM as POItem;
+}
+    </SRVD>
+   </SRVD>
+  </asx:values>
+ </asx:abap>
+</abapGit>
