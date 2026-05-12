@@ -1,0 +1,5 @@
+@EndUserText.label: 'Purchase Order RAP Service'
+define service ZUI_PO_RAP_SRV {
+  expose ZC_PO_RAP_H as PurchaseOrderHeader;
+  expose ZC_PO_RAP_I as PurchaseOrderItem;
+}

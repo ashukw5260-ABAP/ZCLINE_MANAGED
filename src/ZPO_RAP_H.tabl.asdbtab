@@ -1,0 +1,24 @@
+@EndUserText.label : 'Purchase Order Header'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zpo_rap_h {
+
+  key client          : abap.clnt not null;
+  key po_id           : abap.numc(10) not null;
+
+  company_code        : abap.char(4);
+  supplier            : abap.char(20);
+  document_date       : abap.dats;
+  currency_code       : abap.cuky;
+
+  @Semantics.amount.currencyCode : 'currency_code'
+  gross_amount        : abap.curr(15,2);
+
+  created_by          : abp_creation_user;
+  created_at          : abp_creation_tstmpl;
+  last_changed_by     : abp_locinst_lastchange_user;
+  last_changed_at     : abp_locinst_lastchange_tstmpl;
+
+}

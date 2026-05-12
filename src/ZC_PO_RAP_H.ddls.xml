@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+    <DDLS>
+      <DDLNAME>ZC_PO_RAP_H</DDLNAME>
+      <DDLSHORTDESC>Purchase Order Header - Projection View</DDLSHORTDESC>
+      <DDLTYPE>V</DDLTYPE>
+    </DDLS>
+  </asx:values>
+</asx:abap>
